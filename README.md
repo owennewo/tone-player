@@ -1,6 +1,9 @@
 # tone-player
 This is an arduino library that can play musical tones on a speaker (boring!) or a BLDC motor (that's more like it!)
 
+The BLDC part requires [SimpleFOC](https://github.com/simplefoc/Arduino-FOC) arduino library to do the FOC (3 phase) control and requires specific [hardware](https://docs.simplefoc.com/supported_hardware)
+The Piezo should work with little speakers or Piezo (you may need to add a 100ohm resistor in series as the speaker is directly driven from an output pin!).  This shouldn't require specific hardware.
+
 ## Youtube
 [![Hoverboard BLDC Motor as Jukebox -featuring storm32 gimbal controller](https://i9.ytimg.com/vi/iqQp86-zv90/mq2.jpg?sqp=CKDz7PsF&rs=AOn4CLAK7QiIxoBjsX15bIsJOOtRckXPdA)](https://youtu.be/iqQp86-zv90)
 
