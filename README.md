@@ -22,7 +22,7 @@ The examples folder contains:
 | jukebox player  | Plays a set of RTTTL songs  | [bldc/6_jukebox_player.cpp](./examples/bldc/6_jukebox_player.cpp)  | [piezo/6_jukebox_player.cpp](./examples/piezo/6_jukebox_player.cpp)  |
 
 ## Jukebox
-The jukebox is a set of RTTTL files that are found in [RTTTL.h](./RTTTL.h).  Only one is polyphonic (it sort of follows the PTTTL format)
+The jukebox is a set of RTTTL files that are found in [RTTTL.h](./src/RTTTL.h).  Only one is polyphonic (it sort of follows the PTTTL format)
  * RTTTL_CROATIA
  * RTTTL_FRANCE
  * RTTTL_WALES
