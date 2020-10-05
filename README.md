@@ -9,7 +9,7 @@ This library has a RTTTL parser and is able to play polytones on multiple BLDC m
 
 I've used a storm32 gimbal controller to drive the motors - this is a fair bit more powerful than an atmega328p but I reckon the simple examples will squeeze into the 2K of SRAM of an UNO.
 
-##Examples
+## Examples
 The examples folder contains:
 | Example  | Description  | Piezo  | BLDC  |
 |---|---|---|---|
