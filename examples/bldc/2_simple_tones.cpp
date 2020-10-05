@@ -11,35 +11,32 @@ void setup() {
 
   Serial.begin(115200);
   delay(750);
-  Serial.println(F("** TONE PLAYER **"));
 
-  motor1.controller = ControlType::velocity_openloop;
-  motor1.voltage_power_supply = 12;
   /* WARNING: ensure voltage_limit isn't too high - you could overheat motor or MOSFETS!! */
   motor1.voltage_limit = 1.5;
   motor1.init();
 
+  Serial.println(F("** TONE PLAYER **"));
   player.attachSpeaker(&speaker1);
-
 }
 
 // tune: Old mac donald had a farm
 float frequencies[] = { 
-  toneFrequency('c', 6),
-  toneFrequency('c', 6),
-  toneFrequency('c', 6),
-  toneFrequency('g', 5),
-  toneFrequency('a', 5),
-  toneFrequency('a', 5),
-  toneFrequency('g', 5),
+  toneFrequency('c', 5),
+  toneFrequency('c', 5),
+  toneFrequency('c', 5),
+  toneFrequency('g', 4),
+  toneFrequency('a', 4),
+  toneFrequency('a', 4),
+  toneFrequency('g', 4),
   toneFrequency('p', 0),
-  toneFrequency('e', 6),
-  toneFrequency('e', 6),
-  toneFrequency('d', 6),
-  toneFrequency('d', 6),
-  toneFrequency('c', 6),
-  toneFrequency('c', 6),
-  toneFrequency('c', 6),
+  toneFrequency('e', 5),
+  toneFrequency('e', 5),
+  toneFrequency('d', 5),
+  toneFrequency('d', 5),
+  toneFrequency('c', 5),
+  toneFrequency('c', 5),
+  toneFrequency('c', 5),
   toneFrequency('p', 0)
 };
 

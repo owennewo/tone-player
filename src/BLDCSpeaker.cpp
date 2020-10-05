@@ -19,6 +19,11 @@ void BLDCSpeaker::setVolume(float volume)
 
 void BLDCSpeaker::setFrequency(float _frequency)
 {
+    if (frequency == 0) {
+        disable();
+    } else {
+        enable();
+    }
     start_micros = micros();
     Speaker::setFrequency(_frequency);
 }

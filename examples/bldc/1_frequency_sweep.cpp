@@ -13,8 +13,6 @@ void setup() {
   delay(750);
   Serial.println(F("** SWEEP PLAYER **"));
 
-  motor1.controller = ControlType::velocity_openloop;
-  motor1.voltage_power_supply = 12;
   /* WARNING: ensure voltage_limit isn't too high - you could overheat motor or MOSFETS!! */
   motor1.voltage_limit = 1.5;
   motor1.init();

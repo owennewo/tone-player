@@ -22,7 +22,12 @@ void loop() {
   
   // the motor should rotate.  If it doesn't move smoothly increase voltage_limit whilst checking temperature
   // of motors and Driver/MOSFETS 
-  electrical_angle += 0.005;
+  #ifdef ESP32
+    electrical_angle += 0.0005;  //ESP32 is too damn fast!
+  #else
+    electrical_angle += 0.005;
+  #endif
   motor1.setPhaseVoltage(motor1.voltage_limit, electrical_angle);
   
 }
+

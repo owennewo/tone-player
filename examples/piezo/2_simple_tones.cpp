@@ -15,21 +15,21 @@ void setup() {
 
 // tune: Old mac donald had a farm
 float frequencies[] = { 
-  toneFrequency('c', 6),
-  toneFrequency('c', 6),
-  toneFrequency('c', 6),
-  toneFrequency('g', 5),
-  toneFrequency('a', 5),
-  toneFrequency('a', 5),
-  toneFrequency('g', 5),
+  toneFrequency('c', 5),
+  toneFrequency('c', 5),
+  toneFrequency('c', 5),
+  toneFrequency('g', 4),
+  toneFrequency('a', 4),
+  toneFrequency('a', 4),
+  toneFrequency('g', 4),
   toneFrequency('p', 0),
-  toneFrequency('e', 6),
-  toneFrequency('e', 6),
-  toneFrequency('d', 6),
-  toneFrequency('d', 6),
-  toneFrequency('c', 6),
-  toneFrequency('c', 6),
-  toneFrequency('c', 6),
+  toneFrequency('e', 5),
+  toneFrequency('e', 5),
+  toneFrequency('d', 5),
+  toneFrequency('d', 5),
+  toneFrequency('c', 5),
+  toneFrequency('c', 5),
+  toneFrequency('c', 5),
   toneFrequency('p', 0)
 };
 

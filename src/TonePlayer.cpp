@@ -17,7 +17,11 @@ void TonePlayer::playTone(float freq, long duration_msec)
   for (byte speaker_index = 0; speaker_index < speaker_count; speaker_index++)
   {
     speakers[speaker_index]->setFrequency(freq);
-    speakers[speaker_index]->enable();
+    if (freq == 0) {
+      speakers[speaker_index]->disable();
+    } else {
+      speakers[speaker_index]->enable();
+    }
   }
   tick_next_micros = micros() + duration_msec * 1000;
 }
