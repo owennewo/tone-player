@@ -8,7 +8,7 @@ BLDCSpeaker::BLDCSpeaker(BLDCMotor *_motor, float _voltage_limit, int _volume, i
     setVolume(_volume);
     wave_shape = WaveShape::Square; // square is less cpu and sounds old school!
 
-    motor->controller = ControlType::velocity_openloop;
+    motor->controller = MotionControlType::velocity_openloop;
     motor->voltage_limit = _voltage_limit;
 }
 
@@ -35,7 +35,7 @@ void BLDCSpeaker::enable()
 
 void BLDCSpeaker::disable()
 {
-    motor->setPhaseVoltage(0, 0);
+    motor->setPhaseVoltage(0, 0, 0);
     Speaker::disable();
 }
 
@@ -50,19 +50,19 @@ void BLDCSpeaker::loop()
             {
                 speaker_state = !speaker_state;
                 last_toggle_micros = now;
-                motor->setPhaseVoltage(motor->voltage_limit, (speaker_state * amplitude));
+                motor->setPhaseVoltage(motor->voltage_limit, (speaker_state * amplitude), 0);
             }
         }
         else if (wave_shape == WaveShape::Sinusoidal)
         {
             float diff = (now - start_micros);
             float angle = sin(PI * diff / half_period_micros) * amplitude;
-            motor->setPhaseVoltage(motor->voltage_limit, angle);
+            motor->setPhaseVoltage(motor->voltage_limit, 0, angle);
         }
         else
         {
             Serial.println("unknown wavetype");
-            motor->setPhaseVoltage(0, angle);
+            motor->setPhaseVoltage(0, 0, angle);
         }
     }
 }
